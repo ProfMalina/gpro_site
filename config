@@ -1,0 +1,2 @@
+[Database]
+Path = sqlite:////root/gpro_site/gpro.sqlite

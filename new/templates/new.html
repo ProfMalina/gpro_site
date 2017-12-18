@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    {% if not drv %}
+        <p>Такой пилот не зарегистрирован, работаем для Вас с 3.10.2017</p>
+    {% endif %}
+    <table id="drv_list">
+        {% for item in drv %}
+            <tr>
+                <td>id пилота</td>
+                <td>{{ item.id_driver }}</td>
+            </tr>
+            <tr>
+                <td>Имя пилота</td>
+                <td>{{ item.name }}</td>
+            </tr>
+            <tr>
+                <td>Национальность</td>
+                <td>{{ item.nat }}</td>
+            </tr>
+            <tr>
+                <td>ОА пилота</td>
+                <td>{{ item.oa }}</td>
+            </tr>
+            <tr>
+                <td>Концентрация</td>
+                <td>{{ item.con }}</td>
+            </tr>
+            <tr>
+                <td>Талант</td>
+                <td>{{ item.tal }}</td>
+            </tr>
+            <tr>
+                <td>Опыт</td>
+                <td>{{ item.exp }}</td>
+            </tr>
+            <tr>
+                <td>Агрессивность</td>
+                <td>{{ item.agg }}</td>
+            </tr>
+            <tr>
+                <td>Технические знания</td>
+                <td>{{ item.tei }}</td>
+            </tr>
+            <tr>
+                <td>Выносливость</td>
+                <td>{{ item.sta }}</td>
+            </tr>
+            <tr>
+                <td>Харизма</td>
+                <td>{{ item.cha }}</td>
+            </tr>
+            <tr>
+                <td>Мотивация</td>
+                <td>{{ item.mot }}</td>
+            </tr>
+            <tr>
+                <td>Репутация</td>
+                <td>{{ item.rep }}</td>
+            </tr>
+            <tr>
+                <td>Возраст</td>
+                <td>{{ item.age }}</td>
+            </tr>
+            <tr>
+                <td>Вес</td>
+                <td>{{ item.wei }}</td>
+            </tr>
+            <tr>
+                <td>Заканчивает карьеру</td>
+                <td>{{ item.ret }}</td>
+            </tr>
+            <tr>
+                <td>Зарплата</td>
+                <td>{{ item.sal }}</td>
+            </tr>
+            <tr>
+                <td>Премия</td>
+                <td>{{ item.fee }}</td>
+            </tr>
+            <tr>
+                <td>id любимых трасс</td>
+                <td>{{ item.fav }}</td>
+            </tr>
+            <tr>
+                <td>Предложений работы</td>
+                <td>{{ item.off }}</td>
+            </tr>
+            <tr>
+                <td>Время скачивания списка</td>
+                <td>{{ item.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

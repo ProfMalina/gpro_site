@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="drv_list">
+        {% for item in drv %}
+            <p>{{ item.name }}</p>
+            <p>{{ item.con }}</p>
+            <p>{{ item.textcreate_data }}</p>
+        {% endfor %}
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+</body>
+</html>
