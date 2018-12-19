@@ -1,2 +1,2 @@
 sqlalchemy==1.1.14
-Django==1.11.6
+django>=1.11.15
